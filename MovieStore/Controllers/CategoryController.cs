@@ -17,5 +17,10 @@ namespace MovieStore.Controllers
             List<Category> category = _db.categories.ToList();
             return View(category);
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }
