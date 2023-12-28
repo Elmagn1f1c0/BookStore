@@ -14,7 +14,7 @@ namespace MovieStore.Controllers
         }
         public IActionResult Index()
         {
-            List<Category> category = _db.categories.ToList();
+            List<Category> category = _db.Categories.ToList();
             return View(category);
         }
 
@@ -27,8 +27,9 @@ namespace MovieStore.Controllers
         {
             if(ModelState.IsValid)
             {
-                _db.categories.Add(obj);
+                _db.Categories.Add(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Category created successfully";
                 return RedirectToAction("Index");
             }
             return View();
@@ -41,7 +42,7 @@ namespace MovieStore.Controllers
             {
                 return NotFound();
             }
-            Category category = _db.categories.Find(id);
+            Category category = _db.Categories.Find(id);
             if(category == null)
             {
                 return NotFound();
@@ -53,11 +54,40 @@ namespace MovieStore.Controllers
         {
             if (ModelState.IsValid)
             {
-                _db.categories.Update(obj);
+                _db.Categories.Update(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Category updated successfully";
                 return RedirectToAction("Index");
             }
             return View();
+
+        }
+
+        public IActionResult Delete(int id)
+        {
+            if (id == 0)
+            {
+                return NotFound();
+            }
+            Category category = _db.Categories.Find(id);
+            if (category == null)
+            {
+                return NotFound();
+            }
+            return View(category);
+        }
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeletePost(int id)
+        {
+            Category obj = _db.Categories.Find(id);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+            _db.Categories.Remove(obj);
+            _db.SaveChanges();
+            TempData["success"] = "Category deleted successfully";
+            return RedirectToAction("Index");
 
         }
     }
