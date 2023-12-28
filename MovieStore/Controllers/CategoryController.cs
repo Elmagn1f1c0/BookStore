@@ -34,5 +34,31 @@ namespace MovieStore.Controllers
             return View();
             
         }
+
+        public IActionResult Edit(int id)
+        {
+            if(id == 0)
+            {
+                return NotFound();
+            }
+            Category category = _db.categories.Find(id);
+            if(category == null)
+            {
+                return NotFound();
+            }
+            return View(category);
+        }
+        [HttpPost]
+        public IActionResult Edit(Category obj)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.categories.Update(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View();
+
+        }
     }
 }
