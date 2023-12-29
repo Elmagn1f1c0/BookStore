@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Movie.DataAccess.Data;
+using Movie.DataAccess.Repository.Implementation;
+using Movie.DataAccess.Repository.Interface;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +11,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 var app = builder.Build();
 

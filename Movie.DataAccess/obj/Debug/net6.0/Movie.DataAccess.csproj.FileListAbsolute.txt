@@ -3,7 +3,9 @@ C:\Users\hp\Desktop\MovieStore\MovieStore\Movie.DataAccess\bin\Debug\net6.0\Movi
 C:\Users\hp\Desktop\MovieStore\MovieStore\Movie.DataAccess\bin\Debug\net6.0\Movie.DataAccess.dll
 C:\Users\hp\Desktop\MovieStore\MovieStore\Movie.DataAccess\bin\Debug\net6.0\Movie.DataAccess.pdb
 C:\Users\hp\Desktop\MovieStore\MovieStore\Movie.DataAccess\bin\Debug\net6.0\Movie.Models.dll
+C:\Users\hp\Desktop\MovieStore\MovieStore\Movie.DataAccess\bin\Debug\net6.0\Movie.Utility.dll
 C:\Users\hp\Desktop\MovieStore\MovieStore\Movie.DataAccess\bin\Debug\net6.0\Movie.Models.pdb
+C:\Users\hp\Desktop\MovieStore\MovieStore\Movie.DataAccess\bin\Debug\net6.0\Movie.Utility.pdb
 C:\Users\hp\Desktop\MovieStore\MovieStore\Movie.DataAccess\obj\Debug\net6.0\Movie.DataAccess.csproj.AssemblyReference.cache
 C:\Users\hp\Desktop\MovieStore\MovieStore\Movie.DataAccess\obj\Debug\net6.0\Movie.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\hp\Desktop\MovieStore\MovieStore\Movie.DataAccess\obj\Debug\net6.0\Movie.DataAccess.AssemblyInfoInputs.cache
@@ -15,5 +17,3 @@ C:\Users\hp\Desktop\MovieStore\MovieStore\Movie.DataAccess\obj\Debug\net6.0\refi
 C:\Users\hp\Desktop\MovieStore\MovieStore\Movie.DataAccess\obj\Debug\net6.0\Movie.DataAccess.pdb
 C:\Users\hp\Desktop\MovieStore\MovieStore\Movie.DataAccess\obj\Debug\net6.0\Movie.DataAccess.genruntimeconfig.cache
 C:\Users\hp\Desktop\MovieStore\MovieStore\Movie.DataAccess\obj\Debug\net6.0\ref\Movie.DataAccess.dll
-C:\Users\hp\Desktop\MovieStore\MovieStore\Movie.DataAccess\bin\Debug\net6.0\Movie.Utility.dll
-C:\Users\hp\Desktop\MovieStore\MovieStore\Movie.DataAccess\bin\Debug\net6.0\Movie.Utility.pdb
