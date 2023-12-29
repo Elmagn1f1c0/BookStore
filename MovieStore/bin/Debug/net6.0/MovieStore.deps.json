@@ -11,7 +11,8 @@
           "Microsoft.EntityFrameworkCore": "6.0.0",
           "Microsoft.EntityFrameworkCore.Design": "6.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0",
-          "Microsoft.EntityFrameworkCore.Tools": "6.0.0"
+          "Microsoft.EntityFrameworkCore.Tools": "6.0.0",
+          "Movie.DataAccess": "1.0.0"
         },
         "runtime": {
           "MovieStore.dll": {}
@@ -427,6 +428,27 @@
             "fileVersion": "4.700.19.56404"
           }
         }
+      },
+      "Movie.DataAccess/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0",
+          "Movie.Models": "1.0.0",
+          "Movie.Utility": "1.0.0"
+        },
+        "runtime": {
+          "Movie.DataAccess.dll": {}
+        }
+      },
+      "Movie.Models/1.0.0": {
+        "runtime": {
+          "Movie.Models.dll": {}
+        }
+      },
+      "Movie.Utility/1.0.0": {
+        "runtime": {
+          "Movie.Utility.dll": {}
+        }
       }
     }
   },
@@ -736,6 +758,21 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
+    },
+    "Movie.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Movie.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Movie.Utility/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

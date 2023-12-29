@@ -779,6 +779,42 @@
             "rid": "win"
           }
         }
+      },
+      "Movie.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0",
+          "Movie.Models": "1.0.0",
+          "Movie.Utility": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Movie.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Movie.DataAccess.dll": {}
+        }
+      },
+      "Movie.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Movie.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Movie.Models.dll": {}
+        }
+      },
+      "Movie.Utility/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Movie.Utility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Movie.Utility.dll": {}
+        }
       }
     }
   },
@@ -1998,6 +2034,21 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Movie.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../Movie.DataAccess/Movie.DataAccess.csproj",
+      "msbuildProject": "../Movie.DataAccess/Movie.DataAccess.csproj"
+    },
+    "Movie.Models/1.0.0": {
+      "type": "project",
+      "path": "../Movie.Models/Movie.Models.csproj",
+      "msbuildProject": "../Movie.Models/Movie.Models.csproj"
+    },
+    "Movie.Utility/1.0.0": {
+      "type": "project",
+      "path": "../Movie.Utility/Movie.Utility.csproj",
+      "msbuildProject": "../Movie.Utility/Movie.Utility.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2005,7 +2056,8 @@
       "Microsoft.EntityFrameworkCore >= 6.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.0",
-      "Microsoft.EntityFrameworkCore.Tools >= 6.0.0"
+      "Microsoft.EntityFrameworkCore.Tools >= 6.0.0",
+      "Movie.DataAccess >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2040,7 +2092,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.DataAccess\\Movie.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.DataAccess\\Movie.DataAccess.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

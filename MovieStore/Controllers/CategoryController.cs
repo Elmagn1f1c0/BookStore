@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MovieStore.Data;
-using MovieStore.Models;
+using Movie.DataAccess.Data;
+using Movie.Models;
 
-namespace MovieStore.Controllers
+namespace Movie.DataAccess.Controllers
 {
     public class CategoryController : Controller
     {

@@ -1,0 +1,11 @@
+C:\Users\hp\Desktop\MovieStore\MovieStore\Movie.Models\bin\Debug\net6.0\Movie.Models.deps.json
+C:\Users\hp\Desktop\MovieStore\MovieStore\Movie.Models\bin\Debug\net6.0\Movie.Models.dll
+C:\Users\hp\Desktop\MovieStore\MovieStore\Movie.Models\bin\Debug\net6.0\Movie.Models.pdb
+C:\Users\hp\Desktop\MovieStore\MovieStore\Movie.Models\obj\Debug\net6.0\Movie.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\MovieStore\MovieStore\Movie.Models\obj\Debug\net6.0\Movie.Models.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\MovieStore\MovieStore\Movie.Models\obj\Debug\net6.0\Movie.Models.AssemblyInfo.cs
+C:\Users\hp\Desktop\MovieStore\MovieStore\Movie.Models\obj\Debug\net6.0\Movie.Models.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\MovieStore\MovieStore\Movie.Models\obj\Debug\net6.0\Movie.Models.dll
+C:\Users\hp\Desktop\MovieStore\MovieStore\Movie.Models\obj\Debug\net6.0\refint\Movie.Models.dll
+C:\Users\hp\Desktop\MovieStore\MovieStore\Movie.Models\obj\Debug\net6.0\Movie.Models.pdb
+C:\Users\hp\Desktop\MovieStore\MovieStore\Movie.Models\obj\Debug\net6.0\ref\Movie.Models.dll
