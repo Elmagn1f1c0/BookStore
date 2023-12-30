@@ -4,12 +4,12 @@
     "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\MovieStore\\MovieStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.DataAccess\\Movie.DataAccess.csproj": {
+    "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.DataAccess\\Book.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.DataAccess\\Movie.DataAccess.csproj",
-        "projectName": "Movie.DataAccess",
-        "projectPath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.DataAccess\\Movie.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.DataAccess\\Book.DataAccess.csproj",
+        "projectName": "Book.DataAccess",
+        "projectPath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.DataAccess\\Book.DataAccess.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
@@ -33,11 +33,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Models\\Movie.Models.csproj": {
-                "projectPath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Models\\Movie.Models.csproj"
+              "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Models\\Book.Models.csproj": {
+                "projectPath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Models\\Book.Models.csproj"
               },
-              "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Utility\\Movie.Utility.csproj": {
-                "projectPath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Utility\\Movie.Utility.csproj"
+              "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Utility\\Book.Utility.csproj": {
+                "projectPath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Utility\\Book.Utility.csproj"
               }
             }
           }
@@ -87,12 +87,12 @@
         }
       }
     },
-    "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Models\\Movie.Models.csproj": {
+    "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Models\\Book.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Models\\Movie.Models.csproj",
-        "projectName": "Movie.Models",
-        "projectPath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Models\\Movie.Models.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Models\\Book.Models.csproj",
+        "projectName": "Book.Models",
+        "projectPath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Models\\Book.Models.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Models\\obj\\",
         "projectStyle": "PackageReference",
@@ -147,12 +147,12 @@
         }
       }
     },
-    "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Utility\\Movie.Utility.csproj": {
+    "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Utility\\Book.Utility.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Utility\\Movie.Utility.csproj",
-        "projectName": "Movie.Utility",
-        "projectPath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Utility\\Movie.Utility.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Utility\\Book.Utility.csproj",
+        "projectName": "Book.Utility",
+        "projectPath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Utility\\Book.Utility.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Utility\\obj\\",
         "projectStyle": "PackageReference",
@@ -236,8 +236,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.DataAccess\\Movie.DataAccess.csproj": {
-                "projectPath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.DataAccess\\Movie.DataAccess.csproj"
+              "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.DataAccess\\Book.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.DataAccess\\Book.DataAccess.csproj"
               }
             }
           }

@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Movie.Models;
+using Book.Models;
 using System.Diagnostics;
 
-namespace MovieStore.Areas.Customer.Controllers
+namespace BookStore.Areas.Customer.Controllers
 {
     [Area("Customer")]
     public class HomeController : Controller

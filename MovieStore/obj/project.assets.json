@@ -3726,40 +3726,40 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "Movie.DataAccess/1.0.0": {
+      "Book.DataAccess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Book.Models": "1.0.0",
+          "Book.Utility": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0",
-          "Movie.Models": "1.0.0",
-          "Movie.Utility": "1.0.0"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0"
         },
         "compile": {
-          "bin/placeholder/Movie.DataAccess.dll": {}
+          "bin/placeholder/Book.DataAccess.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Movie.DataAccess.dll": {}
+          "bin/placeholder/Book.DataAccess.dll": {}
         }
       },
-      "Movie.Models/1.0.0": {
+      "Book.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/Movie.Models.dll": {}
+          "bin/placeholder/Book.Models.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Movie.Models.dll": {}
+          "bin/placeholder/Book.Models.dll": {}
         }
       },
-      "Movie.Utility/1.0.0": {
+      "Book.Utility/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/Movie.Utility.dll": {}
+          "bin/placeholder/Book.Utility.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Movie.Utility.dll": {}
+          "bin/placeholder/Book.Utility.dll": {}
         }
       }
     }
@@ -10708,30 +10708,30 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "Movie.DataAccess/1.0.0": {
+    "Book.DataAccess/1.0.0": {
       "type": "project",
-      "path": "../Movie.DataAccess/Movie.DataAccess.csproj",
-      "msbuildProject": "../Movie.DataAccess/Movie.DataAccess.csproj"
+      "path": "../Movie.DataAccess/Book.DataAccess.csproj",
+      "msbuildProject": "../Movie.DataAccess/Book.DataAccess.csproj"
     },
-    "Movie.Models/1.0.0": {
+    "Book.Models/1.0.0": {
       "type": "project",
-      "path": "../Movie.Models/Movie.Models.csproj",
-      "msbuildProject": "../Movie.Models/Movie.Models.csproj"
+      "path": "../Movie.Models/Book.Models.csproj",
+      "msbuildProject": "../Movie.Models/Book.Models.csproj"
     },
-    "Movie.Utility/1.0.0": {
+    "Book.Utility/1.0.0": {
       "type": "project",
-      "path": "../Movie.Utility/Movie.Utility.csproj",
-      "msbuildProject": "../Movie.Utility/Movie.Utility.csproj"
+      "path": "../Movie.Utility/Book.Utility.csproj",
+      "msbuildProject": "../Movie.Utility/Book.Utility.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Book.DataAccess >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.16",
-      "Movie.DataAccess >= 1.0.0"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.16"
     ]
   },
   "packageFolders": {
@@ -10741,9 +10741,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\MovieStore\\MovieStore.csproj",
-      "projectName": "MovieStore",
-      "projectPath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\MovieStore\\MovieStore.csproj",
+      "projectUniqueName": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\MovieStore\\BookStore.csproj",
+      "projectName": "BookStore",
+      "projectPath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\MovieStore\\BookStore.csproj",
       "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\MovieStore\\obj\\",
       "projectStyle": "PackageReference",
@@ -10767,8 +10767,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.DataAccess\\Movie.DataAccess.csproj": {
-              "projectPath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.DataAccess\\Movie.DataAccess.csproj"
+            "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.DataAccess\\Book.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.DataAccess\\Book.DataAccess.csproj"
             }
           }
         }

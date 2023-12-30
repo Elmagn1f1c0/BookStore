@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace Movie.DataAccess.Repository.Interface
+namespace Book.DataAccess.Repository.Interface
 {
     public interface IRepository<T> where T : class
     {

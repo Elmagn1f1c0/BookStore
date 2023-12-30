@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Models\\Movie.Models.csproj",
-      "projectName": "Movie.Models",
-      "projectPath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Models\\Movie.Models.csproj",
+      "projectUniqueName": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Models\\Book.Models.csproj",
+      "projectName": "Book.Models",
+      "projectPath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Models\\Book.Models.csproj",
       "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Models\\obj\\",
       "projectStyle": "PackageReference",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3Dn1/V6fT3OVii2j0Ai7MDSu7tOH1urnHHnY4n6WeC84mQts3vEtWaNQ7K4kwHoPsXz+FnX5yHE0JnFxt8iZPg==",
+  "dgSpecHash": "EXsubxYws0H21rvAps1dYYSu19XzIYqeMEvlNmlM0wV1x4si9kOgzHzY1GP5tSADuEuSgOciJP6Fnq3ycgKtKw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Models\\Movie.Models.csproj",
+  "projectFilePath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Models\\Book.Models.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

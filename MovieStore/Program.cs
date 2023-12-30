@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using Movie.DataAccess.Data;
-using Movie.DataAccess.Repository.Implementation;
-using Movie.DataAccess.Repository.Interface;
+using Book.DataAccess.Data;
+using Book.DataAccess.Repository.Implementation;
+using Book.DataAccess.Repository.Interface;
 
 var builder = WebApplication.CreateBuilder(args);
 

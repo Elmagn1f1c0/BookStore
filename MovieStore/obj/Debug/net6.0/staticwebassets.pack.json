@@ -1,8 +1,8 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\MovieStore\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MovieStore.bundle.scp.css",
-      "PackagePath": "staticwebassets\\MovieStore.bundle.scp.css"
+      "Id": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\MovieStore\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\BookStore.bundle.scp.css",
+      "PackagePath": "staticwebassets\\BookStore.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\MovieStore\\wwwroot\\css\\site.css",
@@ -245,20 +245,20 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.MovieStore.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.BookStore.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.MovieStore.props",
-      "PackagePath": "build\\MovieStore.props"
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.BookStore.props",
+      "PackagePath": "build\\BookStore.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.MovieStore.props",
-      "PackagePath": "buildMultiTargeting\\MovieStore.props"
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.BookStore.props",
+      "PackagePath": "buildMultiTargeting\\BookStore.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.MovieStore.props",
-      "PackagePath": "buildTransitive\\MovieStore.props"
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.BookStore.props",
+      "PackagePath": "buildTransitive\\BookStore.props"
     }
   ],
   "ElementsToRemove": []

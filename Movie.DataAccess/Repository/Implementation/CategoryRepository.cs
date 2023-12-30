@@ -1,9 +1,9 @@
-﻿using Movie.DataAccess.Data;
-using Movie.DataAccess.Repository.Interface;
-using Movie.Models;
+﻿using Book.DataAccess.Data;
+using Book.DataAccess.Repository.Interface;
+using Book.Models;
 using System.Linq.Expressions;
 
-namespace Movie.DataAccess.Repository.Implementation
+namespace Book.DataAccess.Repository.Implementation
 {
     public class CategoryRepository : Repository<Category>, ICategoryRepository
     {

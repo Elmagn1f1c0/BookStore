@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Utility\\Movie.Utility.csproj",
-      "projectName": "Movie.Utility",
-      "projectPath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Utility\\Movie.Utility.csproj",
+      "projectUniqueName": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Utility\\Book.Utility.csproj",
+      "projectName": "Book.Utility",
+      "projectPath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Utility\\Book.Utility.csproj",
       "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\hp\\Desktop\\MovieStore\\MovieStore\\Movie.Utility\\obj\\",
       "projectStyle": "PackageReference",

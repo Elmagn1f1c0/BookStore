@@ -1,6 +1,6 @@
-﻿using Movie.Models;
+﻿using Book.Models;
 
-namespace Movie.DataAccess.Repository.Interface
+namespace Book.DataAccess.Repository.Interface
 {
     public interface ICategoryRepository : IRepository<Category>
     {

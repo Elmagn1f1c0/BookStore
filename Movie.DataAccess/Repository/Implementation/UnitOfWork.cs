@@ -1,7 +1,7 @@
-﻿using Movie.DataAccess.Data;
-using Movie.DataAccess.Repository.Interface;
+﻿using Book.DataAccess.Data;
+using Book.DataAccess.Repository.Interface;
 
-namespace Movie.DataAccess.Repository.Implementation
+namespace Book.DataAccess.Repository.Implementation
 {
     public class UnitOfWork : IUnitOfWork
     {

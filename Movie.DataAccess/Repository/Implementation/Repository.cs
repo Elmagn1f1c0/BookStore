@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Movie.DataAccess.Data;
-using Movie.DataAccess.Repository.Interface;
+using Book.DataAccess.Data;
+using Book.DataAccess.Repository.Interface;
 using System.Linq.Expressions;
 
-namespace Movie.DataAccess.Repository.Implementation
+namespace Book.DataAccess.Repository.Implementation
 {
     public class Repository<T> : IRepository<T> where T : class
     {

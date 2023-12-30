@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Movie.DataAccess.Data;
-using Movie.DataAccess.Repository.Interface;
-using Movie.Models;
+using Book.DataAccess.Data;
+using Book.DataAccess.Repository.Interface;
+using Book.Models;
 
-namespace MovieStore.Areas.Admin.Controllers
+namespace BookStore.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class CategoryController : Controller
