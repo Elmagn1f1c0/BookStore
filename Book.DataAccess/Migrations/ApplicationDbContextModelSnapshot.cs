@@ -2,6 +2,8 @@
 using Book.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
@@ -72,6 +74,9 @@ namespace Book.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("integer");
+
                     b.Property<string>("Description")
                         .HasColumnType("text");
 
@@ -97,6 +102,8 @@ namespace Book.DataAccess.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CategoryId");
+
                     b.ToTable("Products");
 
                     b.HasData(
@@ -104,6 +111,7 @@ namespace Book.DataAccess.Migrations
                         {
                             Id = 1,
                             Author = "Ron Parker",
+                            CategoryId = 1,
                             Description = "An interesting movie",
                             ISBN = "TH1233333333",
                             ListPrice = 30.0,
@@ -116,6 +124,7 @@ namespace Book.DataAccess.Migrations
                         {
                             Id = 2,
                             Author = "Ron Parker",
+                            CategoryId = 2,
                             Description = "An interesting movie",
                             ISBN = "RD128888888",
                             ListPrice = 25.0,
@@ -128,6 +137,7 @@ namespace Book.DataAccess.Migrations
                         {
                             Id = 3,
                             Author = "Ron Parker",
+                            CategoryId = 3,
                             Description = "An interesting movie",
                             ISBN = "UJ2573817Y",
                             ListPrice = 30.0,
@@ -136,6 +146,17 @@ namespace Book.DataAccess.Migrations
                             Price50 = 25.0,
                             Title = "13 Reasons "
                         });
+                });
+
+            modelBuilder.Entity("Book.Models.Product", b =>
+                {
+                    b.HasOne("Book.Models.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
                 });
 #pragma warning restore 612, 618
         }

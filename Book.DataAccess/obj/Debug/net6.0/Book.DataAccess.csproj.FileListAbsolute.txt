@@ -13,3 +13,5 @@ C:\Users\hp\Desktop\BookStore\BookStore\Book.DataAccess\obj\Debug\net6.0\Book.Da
 C:\Users\hp\Desktop\BookStore\BookStore\Book.DataAccess\obj\Debug\net6.0\refint\Book.DataAccess.dll
 C:\Users\hp\Desktop\BookStore\BookStore\Book.DataAccess\obj\Debug\net6.0\Book.DataAccess.pdb
 C:\Users\hp\Desktop\BookStore\BookStore\Book.DataAccess\obj\Debug\net6.0\ref\Book.DataAccess.dll
+C:\Users\hp\Desktop\BookStore\BookStore\Book.DataAccess\bin\Debug\net6.0\Book.DataAccess.runtimeconfig.json
+C:\Users\hp\Desktop\BookStore\BookStore\Book.DataAccess\obj\Debug\net6.0\Book.DataAccess.genruntimeconfig.cache
