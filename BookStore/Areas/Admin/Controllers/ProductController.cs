@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Book.DataAccess.Repository.Interface;
 using Book.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace BookStore.Areas.Admin.Controllers
 {
@@ -16,6 +17,11 @@ namespace BookStore.Areas.Admin.Controllers
         public IActionResult Index()
         {
             List<Product> product = _unitOfWork.Product.GetAll().ToList();
+            IEnumerable<SelectListItem> CategoryList = _unitOfWork.Category.GetAll().Select(u => new SelectListItem 
+            {
+                Text = u.Name,
+                Value = u.Id.ToString()
+            });
             return View(product);
         }
 
