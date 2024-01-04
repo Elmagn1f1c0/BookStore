@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Book.Models
@@ -9,6 +10,7 @@ namespace Book.Models
         public int Id { get; set; }
         [Required]
         public string Title { get; set; }
+        [Required]
         public string Description { get; set; }
         [Required]
         public string ISBN { get; set; }
@@ -35,7 +37,9 @@ namespace Book.Models
         public double Price100 { get; set; }
         public int CategoryId { get; set; }
         [ForeignKey("CategoryId")]
+        [ValidateNever]
         public Category Category { get; set; }
+        [ValidateNever]
         public string ImageUrl { get; set; }
     } 
 }
