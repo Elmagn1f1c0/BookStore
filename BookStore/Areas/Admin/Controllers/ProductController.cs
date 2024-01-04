@@ -66,19 +66,39 @@ namespace BookStore.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            return View(product);
+
+            var productVM = new ProductVM
+            {
+                Product = product,
+                CategoryList = _unitOfWork.Category.GetAll().Select(u => new SelectListItem
+                {
+                    Text = u.Name,
+                    Value = u.Id.ToString()
+                })
+            };
+
+            return View(productVM);
         }
         [HttpPost]
-        public IActionResult Edit(Product obj)
+        public IActionResult Edit(ProductVM productVM)
         {
+
             if (ModelState.IsValid)
             {
-                _unitOfWork.Product.Update(obj);
+                _unitOfWork.Product.Update(productVM.Product);
                 _unitOfWork.Save();
                 TempData["success"] = "Product updated successfully";
                 return RedirectToAction("Index");
             }
-            return View();
+            else
+            {
+                productVM.CategoryList = _unitOfWork.Category.GetAll().Select(u => new SelectListItem
+                {
+                    Text = u.Name,
+                    Value = u.Id.ToString()
+                });
+                return View(productVM);
+            }
 
         }
 
