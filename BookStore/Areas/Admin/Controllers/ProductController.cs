@@ -22,84 +22,62 @@ namespace BookStore.Areas.Admin.Controllers
             return View(product);
         }
 
-        public IActionResult Create()
+        public IActionResult Upsert(int? id)
         {
 
-            var productVM = new ProductVM();
-
-            productVM.CategoryList = _unitOfWork.Category.GetAll().Select(u => new SelectListItem
+            ProductVM productVM = new()
             {
-                Text = u.Name,
-                Value = u.Id.ToString()
-            });
-            return View(productVM);
-        }
-        [HttpPost]
-        public IActionResult Create(ProductVM productVM)
-        {
-            if (ModelState.IsValid)
-            {
-                _unitOfWork.Product.Add(productVM.Product);
-                _unitOfWork.Save();
-                TempData["success"] = "Product created successfully";
-                return RedirectToAction("Index");
-            }
-            else
-            {
-                productVM.CategoryList = _unitOfWork.Category.GetAll().Select(u => new SelectListItem
-                {
-                    Text = u.Name,
-                    Value = u.Id.ToString()
-                });
-                return View(productVM);
-            }
-        }
-
-        public IActionResult Edit(int id)
-        {
-            if (id == 0)
-            {
-                return NotFound();
-            }
-            Product product = _unitOfWork.Product.Get(u => u.Id == id);
-            if (product == null)
-            {
-                return NotFound();
-            }
-
-            var productVM = new ProductVM
-            {
-                Product = product,
                 CategoryList = _unitOfWork.Category.GetAll().Select(u => new SelectListItem
                 {
                     Text = u.Name,
                     Value = u.Id.ToString()
-                })
+                }),
+                Product = new Product()
             };
-
-            return View(productVM);
-        }
-        [HttpPost]
-        public IActionResult Edit(ProductVM productVM)
-        {
-
-            if (ModelState.IsValid)
+            if (id == null || id == 0)
             {
-                _unitOfWork.Product.Update(productVM.Product);
-                _unitOfWork.Save();
-                TempData["success"] = "Product updated successfully";
-                return RedirectToAction("Index");
+                //create
+                return View(productVM);
             }
             else
             {
-                productVM.CategoryList = _unitOfWork.Category.GetAll().Select(u => new SelectListItem
-                {
-                    Text = u.Name,
-                    Value = u.Id.ToString()
-                });
+                //update
+                productVM.Product = _unitOfWork.Product.Get(u => u.Id == id);
                 return View(productVM);
             }
+           
+        }
 
+        [HttpPost]
+        public IActionResult Upsert(ProductVM productVM, IFormFile file)
+        {
+            if (ModelState.IsValid)
+            {
+                if (productVM.Product.Id == 0)
+                {
+                    _unitOfWork.Product.Add(productVM.Product);
+                    TempData["success"] = "Product created successfully";
+                }
+
+                else
+                {
+                    // Update operation
+                    _unitOfWork.Product.Update(productVM.Product);
+                    TempData["success"] = "Product updated successfully";
+                }
+                    _unitOfWork.Save();
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    productVM.CategoryList = _unitOfWork.Category.GetAll().Select(u => new SelectListItem
+                    {
+                        Text = u.Name,
+                        Value = u.Id.ToString()
+                    });
+                    return View(productVM);
+                }
+            
         }
 
         public IActionResult Delete(int id)
