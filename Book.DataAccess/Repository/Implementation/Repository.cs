@@ -46,7 +46,7 @@ public class Repository<T> : IRepository<T> where T : class
         {
             foreach (var includeProp in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
             {
-                // Ensure that the navigation property exists before including it
+             
                 if (_db.Model.FindEntityType(typeof(T)).FindNavigation(includeProp) != null)
                 {
                     query = query.Include(includeProp);
