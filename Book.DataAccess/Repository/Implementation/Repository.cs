@@ -1,45 +1,70 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Book.DataAccess.Data;
+﻿using Book.DataAccess.Data;
 using Book.DataAccess.Repository.Interface;
+using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
-namespace Book.DataAccess.Repository.Implementation
+public class Repository<T> : IRepository<T> where T : class
 {
-    public class Repository<T> : IRepository<T> where T : class
+    private readonly ApplicationDbContext _db;
+    internal DbSet<T> dbSet;
+
+    public Repository(ApplicationDbContext db)
     {
-        private readonly ApplicationDbContext _db;
-        internal DbSet<T> dbSet;
-        public Repository(ApplicationDbContext db)
+        _db = db;
+        dbSet = _db.Set<T>();
+    }
+
+    public void Add(T entity)
+    {
+        dbSet.Add(entity);
+    }
+
+    public T Get(Expression<Func<T, bool>> filter, string? includeProperties = null)
+    {
+        IQueryable<T> query = dbSet;
+        query = query.Where(filter);
+
+        if (!string.IsNullOrEmpty(includeProperties))
         {
-            _db = db;
-            dbSet = _db.Set<T>();
-        }
-        public void Add(T entity)
-        {
-            dbSet.Add(entity);
+            foreach (var includeProp in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                if (_db.Model.FindEntityType(typeof(T)).FindNavigation(includeProp) != null)
+                {
+                    query = query.Include(includeProp);
+                }
+            }
         }
 
-        public T Get(Expression<Func<T, bool>> filter)
+        return query.FirstOrDefault();
+    }
+
+    public IEnumerable<T> GetAll(string? includeProperties = null)
+    {
+        IQueryable<T> query = dbSet;
+
+        if (!string.IsNullOrEmpty(includeProperties))
         {
-            IQueryable<T> query = dbSet;
-            query = query.Where(filter);
-            return query.FirstOrDefault();
+            foreach (var includeProp in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                // Ensure that the navigation property exists before including it
+                if (_db.Model.FindEntityType(typeof(T)).FindNavigation(includeProp) != null)
+                {
+                    query = query.Include(includeProp);
+                }
+            }
         }
 
-        public IEnumerable<T> GetAll()
-        {
-            IQueryable<T> query = dbSet;
-            return query.ToList();
-        }
+        return query.ToList();
+    }
 
-        public void Remove(T entity)
-        {
-            dbSet.Remove(entity);
-        }
+    public void Remove(T entity)
+    {
+        dbSet.Remove(entity);
+    }
 
-        public void RemoveRange(IEnumerable<T> entity)
-        {
-            dbSet.RemoveRange(entity);
-        }
+    public void RemoveRange(IEnumerable<T> entity)
+    {
+        dbSet.RemoveRange(entity);
     }
 }
+
