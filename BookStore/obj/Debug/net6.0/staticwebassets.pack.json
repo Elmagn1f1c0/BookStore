@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\hp\\Desktop\\BookStore\\BookStore\\BookStore\\wwwroot\\images\\product\\32c4df45-69ae-4e28-9c87-b8d35d0453c3.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\32c4df45-69ae-4e28-9c87-b8d35d0453c3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\Desktop\\BookStore\\BookStore\\BookStore\\wwwroot\\images\\product\\83408c7b-31ab-4948-b791-44ac698d98d7.jpeg",
+      "PackagePath": "staticwebassets\\images\\product\\83408c7b-31ab-4948-b791-44ac698d98d7.jpeg"
+    },
+    {
       "Id": "C:\\Users\\hp\\Desktop\\BookStore\\BookStore\\BookStore\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
