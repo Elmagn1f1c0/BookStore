@@ -19,9 +19,9 @@ namespace BookStore.Areas.Admin.Controllers
         }
         public IActionResult Index()
         {
-            List<Product> product = _unitOfWork.Product.GetAll(includeProperties: "Category").ToList();
+            List<Product> products = _unitOfWork.Product.GetAll(includeProperties: "Category").ToList();
 
-            return View(product);
+            return View(products);
         }
 
         public IActionResult Upsert(int? id)
@@ -133,5 +133,14 @@ namespace BookStore.Areas.Admin.Controllers
             return RedirectToAction("Index");
 
         }
+
+        #region API CALLS
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            List<Product> product = _unitOfWork.Product.GetAll(includeProperties: "Category").ToList();
+            return Json(new {data = product});
+        }
+        #endregion
     }
 }
