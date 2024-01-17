@@ -144,7 +144,7 @@ namespace BookStore.Areas.Admin.Controllers
             return Json(new {data = product});
         }
 
-        
+        [HttpDelete]
         public IActionResult Delete(int id)
         {
             var obj = _unitOfWork.Product.Get(u => u.Id == id);
