@@ -1,9 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Book.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace Book.DataAccess.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
@@ -12,6 +13,8 @@ namespace Book.DataAccess.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<Category>().HasData(
                 new Category
                 {
