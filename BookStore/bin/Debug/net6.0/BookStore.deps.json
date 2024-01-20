@@ -3020,7 +3020,8 @@
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.1.3",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.26"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.26",
+          "Microsoft.Extensions.Identity.Stores": "6.0.26"
         },
         "runtime": {
           "Book.Models.dll": {}
