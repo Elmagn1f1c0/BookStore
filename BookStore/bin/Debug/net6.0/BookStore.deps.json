@@ -9,6 +9,7 @@
       "BookStore/1.0.0": {
         "dependencies": {
           "Book.DataAccess": "1.0.0",
+          "Book.Utility": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.26",
           "Microsoft.AspNetCore.Identity.UI": "6.0.26",
           "Microsoft.EntityFrameworkCore.Design": "6.0.26",
@@ -3026,6 +3027,15 @@
         "runtime": {
           "Book.Models.dll": {}
         }
+      },
+      "Book.Utility/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.UI": "6.0.26",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.26"
+        },
+        "runtime": {
+          "Book.Utility.dll": {}
+        }
       }
     }
   },
@@ -4910,6 +4920,11 @@
       "sha512": ""
     },
     "Book.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Book.Utility/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

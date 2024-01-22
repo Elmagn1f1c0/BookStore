@@ -4736,6 +4736,20 @@
         "runtime": {
           "bin/placeholder/Book.Models.dll": {}
         }
+      },
+      "Book.Utility/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.UI": "6.0.26",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Book.Utility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Book.Utility.dll": {}
+        }
       }
     }
   },
@@ -12683,11 +12697,17 @@
       "type": "project",
       "path": "../Book.Models/Book.Models.csproj",
       "msbuildProject": "../Book.Models/Book.Models.csproj"
+    },
+    "Book.Utility/1.0.0": {
+      "type": "project",
+      "path": "../Book.Utility/Book.Utility.csproj",
+      "msbuildProject": "../Book.Utility/Book.Utility.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Book.DataAccess >= 1.0.0",
+      "Book.Utility >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.26",
       "Microsoft.AspNetCore.Identity.UI >= 6.0.26",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.26",
@@ -12732,6 +12752,9 @@
           "projectReferences": {
             "C:\\Users\\hp\\Desktop\\BookStore\\BookStore\\Book.DataAccess\\Book.DataAccess.csproj": {
               "projectPath": "C:\\Users\\hp\\Desktop\\BookStore\\BookStore\\Book.DataAccess\\Book.DataAccess.csproj"
+            },
+            "C:\\Users\\hp\\Desktop\\BookStore\\BookStore\\Book.Utility\\Book.Utility.csproj": {
+              "projectPath": "C:\\Users\\hp\\Desktop\\BookStore\\BookStore\\Book.Utility\\Book.Utility.csproj"
             }
           }
         }

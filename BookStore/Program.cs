@@ -3,6 +3,8 @@ using Book.DataAccess.Data;
 using Book.DataAccess.Repository.Implementation;
 using Book.DataAccess.Repository.Interface;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Book.Utility;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,10 +17,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 }
     );
 
-builder.Services.AddDefaultIdentity<IdentityUser>()
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IEmailSender, EmailSender>();
 
 var app = builder.Build();
 
