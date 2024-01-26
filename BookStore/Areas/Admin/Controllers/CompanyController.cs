@@ -44,6 +44,53 @@ namespace BulkyBookWeb.Controllers
             }
         }
 
+        public IActionResult Search(string searchString)
+        {
+            if (string.IsNullOrEmpty(searchString))
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
+            var accounts = _unitOfWork.Company.GetAll();
+
+            if (accounts == null)
+            {
+                return BadRequest("It can't be empty");
+            }
+
+            searchString = searchString.ToLower();
+
+            var searchResults = accounts
+                .Where(account =>
+                    account.Name.ToLower().Contains(searchString) ||
+                    account.StreetAddress.ToLower().Contains(searchString) ||
+                    account.City.ToLower().Contains(searchString) ||
+                    account.State.ToString().ToLower() == searchString ||
+                    account.PhoneNumber.Contains(searchString) ||
+                    account.PostalCode.Contains(searchString))
+                    
+                .Select(account => new GetCompany
+                {
+                    Id = account.Id,
+                    Name = account.Name,
+                    StreetAddress = account.StreetAddress,
+                    State = account.State,
+                    PhoneNumber = account.PhoneNumber,
+                    City = account.City,
+                    PostalCode = account.PostalCode,
+                })
+                .ToList();
+
+            if (searchResults.Count > 0)
+            {
+                var totalItems = accounts.Count();
+                TempData["success"] = "Search successful";
+                return View("Index", new PaginatedList<GetCompany>(searchResults, totalItems, 1, 1));
+            }
+
+            return View("AccountIndex", new PaginatedList<GetCompany>(new List<GetCompany>(), 0, 1, 1));
+        }
+
         //GET
         public IActionResult Upsert(int? id)
         {
