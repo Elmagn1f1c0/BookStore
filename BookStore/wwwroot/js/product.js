@@ -1,9 +1,7 @@
 ﻿var dataTable;
 
-$(document).ready(function () {
+$(function () {
     loadDataTable();
-
-
 });
 
 function loadDataTable() {

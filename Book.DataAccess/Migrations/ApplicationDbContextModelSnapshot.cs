@@ -63,6 +63,70 @@ namespace Book.DataAccess.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Book.Models.Company", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("City")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PostalCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("State")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StreetAddress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Companies");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            City = "Alimosho",
+                            Name = "Tech solution",
+                            PhoneNumber = "09123456789",
+                            PostalCode = "12333",
+                            State = "Lagos",
+                            StreetAddress = "Cele"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            City = "Alimosho",
+                            Name = "Decagon",
+                            PhoneNumber = "09176456789",
+                            PostalCode = "12333",
+                            State = "Lagos",
+                            StreetAddress = "Mushin"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            City = "Alimosho",
+                            Name = "Andela",
+                            PhoneNumber = "09129956789",
+                            PostalCode = "12333",
+                            State = "Lagos",
+                            StreetAddress = "Oshodi"
+                        });
+                });
+
             modelBuilder.Entity("Book.Models.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -307,12 +371,10 @@ namespace Book.DataAccess.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderKey")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("nvarchar(max)");
@@ -349,12 +411,10 @@ namespace Book.DataAccess.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LoginProvider")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Value")
                         .HasColumnType("nvarchar(max)");

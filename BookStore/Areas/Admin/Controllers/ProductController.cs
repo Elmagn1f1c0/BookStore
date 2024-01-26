@@ -109,34 +109,6 @@ namespace BookStore.Areas.Admin.Controllers
             
         }
 
-        //public IActionResult Delete(int id)
-        //{
-        //    if (id == 0)
-        //    {
-        //        return NotFound();
-        //    }
-        //    Product product = _unitOfWork.Product.Get(u => u.Id == id);
-        //    if (product == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    return View(product);
-        //}
-        //[HttpPost, ActionName("Delete")]
-        //public IActionResult DeletePost(int id)
-        //{
-        //    Product obj = _unitOfWork.Product.Get(u => u.Id == id);
-        //    if (obj == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    _unitOfWork.Product.Remove(obj);
-        //    _unitOfWork.Save();
-        //    TempData["success"] = "Product deleted successfully";
-        //    return RedirectToAction("Index");
-
-        //}
-
         #region API CALLS
         [HttpGet]
         public IActionResult GetAll()
