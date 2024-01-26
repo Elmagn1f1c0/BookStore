@@ -37,6 +37,26 @@ public class Repository<T> : IRepository<T> where T : class
 
         return query.FirstOrDefault();
     }
+    public T GetById(int id, string includeProperties = null)
+    {
+        IQueryable<T> query = dbSet;
+
+        // Assuming the entity has a property named "Id"
+        query = query.Where(e => e.GetType().GetProperty("Id").GetValue(e).Equals(id));
+
+        if (!string.IsNullOrEmpty(includeProperties))
+        {
+            foreach (var includeProp in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                if (_db.Model.FindEntityType(typeof(T)).FindNavigation(includeProp) != null)
+                {
+                    query = query.Include(includeProp);
+                }
+            }
+        }
+
+        return query.FirstOrDefault();
+    }
 
     public IEnumerable<T> GetAll(string includeProperties = null)
     {

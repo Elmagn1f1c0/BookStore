@@ -5,9 +5,9 @@ $(function () {
 });
 
 function loadDataTable() {
-    dataTable = $('#tlData').DataTable({
+    dataTable = $('#tblData').DataTable({
         "ajax": {
-            "url":"/Admin/Company/GetAll"
+            "url":"/admin/company/getall"
         },
         "columns": [
             { "data": "name", "width": "15%" },
@@ -20,9 +20,9 @@ function loadDataTable() {
                 "render": function (data) {
                     return `
                         <div class="w-75 btn-group" role="group">
-                        <a href="/Admin/Company/Upsert?id=${data}"
+                        <a href="/admin/company/upsert?id=${data}"
                         class="btn btn-primary mx-2"> <i class="bi bi-pencil-square"></i> Edit</a>
-                        <a onClick=Delete('/Admin/Company/Delete/${data}')
+                        <a onClick=Delete('/admin/company/delete/${data}')
                         class="btn btn-danger mx-2"> <i class="bi bi-trash-fill"></i> Delete</a>
 					</div>
                         `
@@ -33,7 +33,7 @@ function loadDataTable() {
     });
 }
 
-function Delete(url) {
+function companyDelete(url) {
     Swal.fire({
         title: 'Are you sure?',
         text: "You won't be able to revert this!",

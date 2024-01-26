@@ -6,6 +6,7 @@ namespace Book.DataAccess.Repository.Interface
     {
         IEnumerable<T> GetAll(string includeProperties = null);
         T Get(Expression<Func<T, bool>> filter, string includeProperties = null);
+        T GetById(int id, string includeProperties = null);
         void Add(T entity);
         void Remove(T entity);
         void RemoveRange(IEnumerable<T> entity);

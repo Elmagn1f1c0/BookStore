@@ -1,5 +1,6 @@
 ﻿using Book.DataAccess.Data;
 using Book.DataAccess.Repository.Interface;
+using Book.Models;
 
 namespace Book.DataAccess.Repository.Implementation
 {
@@ -23,6 +24,10 @@ namespace Book.DataAccess.Repository.Implementation
         public void Save()
         {
             _db.SaveChanges();
+        }
+        public async Task<Company> Get(int id)
+        {
+            return await Company.GetById(id);
         }
     }
 }
