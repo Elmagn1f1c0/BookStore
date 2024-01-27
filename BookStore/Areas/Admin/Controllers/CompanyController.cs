@@ -242,34 +242,5 @@ namespace BulkyBookWeb.Controllers
                 return View(model);
             }
         }
-
-
-
-
-
-        //#region API CALLS
-        //[HttpGet]
-        //public IActionResult GetAll()
-        //{
-        //    var company = _unitOfWork.Company.GetAll();
-        //    return Json(new { data = company });
-        //}
-
-        ////POST
-        //[HttpDelete]
-        //public IActionResult Delete(int? id)
-        //{
-        //    var obj = _unitOfWork.Company.Get(u => u.Id == id);
-        //    if (obj == null)
-        //    {
-        //        return Json(new { success = false, message = "Error while deleting" });
-        //    }
-
-        //    _unitOfWork.Company.Remove(obj);
-        //    _unitOfWork.Save();
-        //    return Json(new { success = true, message = "Delete Successful" });
-
-        //}
-        //#endregion
     }
 }
