@@ -294,3 +294,4 @@ C:\Users\hp\Desktop\BookStore\BookStore\BookStore\bin\Debug\net6.0\Book.Utility.
 C:\Users\hp\Desktop\BookStore\BookStore\BookStore\bin\Debug\net6.0\Book.Utility.pdb
 C:\Users\hp\Desktop\BookStore\BookStore\BookStore\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\hp\Desktop\BookStore\BookStore\BookStore\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\hp\Desktop\BookStore\BookStore\BookStore\obj\Debug\net6.0\BookStore.MvcApplicationPartsAssemblyInfo.cs
