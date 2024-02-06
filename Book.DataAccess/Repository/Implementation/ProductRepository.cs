@@ -1,6 +1,8 @@
 ﻿using Book.DataAccess.Data;
 using Book.DataAccess.Repository.Interface;
 using Book.Models;
+using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace Book.DataAccess.Repository.Implementation
 {
@@ -32,6 +34,17 @@ namespace Book.DataAccess.Repository.Implementation
                     objFromDb.ImageUrl = obj.ImageUrl;
                 }
             }
+        }
+        private async Task<Product> GetAsync(Expression<Func<Product, bool>> filter)
+        {
+            IQueryable<Product> query = _db.Set<Product>();
+            query = query.Where(filter);
+            return await query.FirstOrDefaultAsync();
+        }
+        public async Task<Product> GetById(int id)
+        {
+            // Assuming your entity has an "Id" property
+            return await GetAsync(entity => entity.Id == id);
         }
     }
 }

@@ -38,5 +38,9 @@ namespace Book.DataAccess.Repository.Implementation
         {
             return await Company.GetById(id);
         }
+        public async Task<Product> GetOne(int id)
+        {
+            return await Product.GetById(id);
+        }
     }
 }

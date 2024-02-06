@@ -5,11 +5,10 @@ using Book.Models;
 using Book.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Security.Principal;
 
 namespace BulkyBookWeb.Controllers
 {
-    [Area("Admin")]
+	[Area("Admin")]
     [Authorize(Roles = SD.Role_Admin)]
     public class CompanyController : Controller
     {

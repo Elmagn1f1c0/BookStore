@@ -10,6 +10,8 @@ namespace Book.DataAccess.Profiles
         {
             CreateMap<Company, GetCompany>();
             CreateMap<GetCompany, Company>();
+            CreateMap<GetProduct, Product>();
+            CreateMap<Product, GetProduct>();
         }
     }
 }
