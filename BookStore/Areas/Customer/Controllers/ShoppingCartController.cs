@@ -3,13 +3,13 @@ using Book.Models;
 using Book.Models.ViewModels;
 using Book.Utility;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
+using Stripe.Checkout;
 using System.Security.Claims;
 
 namespace BookStore.Areas.Customer.Controllers
 {
-	[Area("customer")]
+    [Area("customer")]
 	[Authorize]
 	public class ShoppingCartController : Controller
 	{
@@ -124,10 +124,51 @@ namespace BookStore.Areas.Customer.Controllers
 			{
 				// it is a regular customer account and we need to capture payment
 				// stripe logic
-			}
+				var domain = "https://localhost:7045/";
+				var options = new SessionCreateOptions
+				{
+					SuccessUrl = domain + $"customer/ShoppingCart/OrderConfirmation?id={ShoppingCartVM.OrderHeader.Id}",
+                    CancelUrl = domain + "customer/ShoppingCart/index",
+                    LineItems = new List<SessionLineItemOptions>(),
+					Mode = "payment",
+				
+				};
 
-			return RedirectToAction(nameof(OrderConfirmation), new { id = ShoppingCartVM.OrderHeader.Id });
-		}
+				foreach (var item in ShoppingCartVM.ShoppingCartList)
+				{
+
+					var sessionLineItem = new SessionLineItemOptions
+					{
+						PriceData = new SessionLineItemPriceDataOptions
+						{
+							UnitAmount = (long)(item.Price * 100),//20.00 -> 2000
+							Currency = "usd",
+							ProductData = new SessionLineItemPriceDataProductDataOptions
+							{
+								Name = item.Product.Title
+							},
+
+						},
+						Quantity = item.Count,
+					};
+					options.LineItems.Add(sessionLineItem);
+
+				}
+
+
+                var service = new SessionService();
+                Session session = service.Create(options);
+                _unitOfWork.OrderHeader.UpdateStripePaymentID(ShoppingCartVM.OrderHeader.Id, session.Id, session.PaymentIntentId);
+                _unitOfWork.Save();
+                Response.Headers.Add("Location", session.Url);
+                return new StatusCodeResult(303);
+            }
+            return RedirectToAction(nameof(OrderConfirmation), new { id = ShoppingCartVM.OrderHeader.Id });
+            //else
+            //{
+            //    return RedirectToAction("OrderConfirmation", "Cart", new { id = ShoppingCartVM.OrderHeader.Id });
+            //}
+        }
 
 		public IActionResult OrderConfirmation(int id)
 		{
