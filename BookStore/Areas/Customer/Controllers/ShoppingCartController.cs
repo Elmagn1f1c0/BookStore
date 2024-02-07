@@ -84,7 +84,7 @@ namespace BookStore.Areas.Customer.Controllers
 			ShoppingCartVM.OrderHeader.ApplicationUserId = userId;
 				
 
-			ShoppingCartVM.OrderHeader.ApplicationUser = _unitOfWork.ApplicationUser.Get(u => u.Id == userId);
+			ApplicationUser applicationUser = _unitOfWork.ApplicationUser.Get(u => u.Id == userId);
 
 			foreach (var cart in ShoppingCartVM.ShoppingCartList)
 			{
@@ -92,7 +92,7 @@ namespace BookStore.Areas.Customer.Controllers
 				ShoppingCartVM.OrderHeader.OrderTotal += (cart.Price * cart.Count);
 			}
 
-			if(ShoppingCartVM.OrderHeader.ApplicationUser.CompanyId.GetValueOrDefault() == 0)
+			if(applicationUser.CompanyId.GetValueOrDefault() == 0)
 			{
 				// it is a regular customer account 
 				ShoppingCartVM.OrderHeader.PaymentStatus = SD.PaymentStatusPending;
@@ -120,7 +120,7 @@ namespace BookStore.Areas.Customer.Controllers
 				_unitOfWork.Save();
 			}
 
-			if (ShoppingCartVM.OrderHeader.ApplicationUser.CompanyId.GetValueOrDefault() == 0)
+			if (applicationUser.CompanyId.GetValueOrDefault() == 0)
 			{
 				// it is a regular customer account and we need to capture payment
 				// stripe logic
