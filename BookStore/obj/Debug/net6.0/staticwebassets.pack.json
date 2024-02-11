@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\images\\product\\4488b572-d829-465d-91ad-3aa3bcca94e2.jpg"
     },
     {
+      "Id": "C:\\Users\\hp\\Desktop\\BookStore\\BookStore\\BookStore\\wwwroot\\images\\product\\7905f2d9-77e7-47e5-b76b-d87f05824301.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\7905f2d9-77e7-47e5-b76b-d87f05824301.jpg"
+    },
+    {
       "Id": "C:\\Users\\hp\\Desktop\\BookStore\\BookStore\\BookStore\\wwwroot\\images\\product\\a4058b7b-c21b-400e-9dc3-49cb9bad23a6.jpg",
       "PackagePath": "staticwebassets\\images\\product\\a4058b7b-c21b-400e-9dc3-49cb9bad23a6.jpg"
     },
@@ -33,12 +37,8 @@
       "PackagePath": "staticwebassets\\images\\product\\lawn_leaf.jpg"
     },
     {
-      "Id": "C:\\Users\\hp\\Desktop\\BookStore\\BookStore\\BookStore\\wwwroot\\js\\company.js",
-      "PackagePath": "staticwebassets\\js\\company.js"
-    },
-    {
-      "Id": "C:\\Users\\hp\\Desktop\\BookStore\\BookStore\\BookStore\\wwwroot\\js\\product.js",
-      "PackagePath": "staticwebassets\\js\\product.js"
+      "Id": "C:\\Users\\hp\\Desktop\\BookStore\\BookStore\\BookStore\\wwwroot\\js\\order.js",
+      "PackagePath": "staticwebassets\\js\\order.js"
     },
     {
       "Id": "C:\\Users\\hp\\Desktop\\BookStore\\BookStore\\BookStore\\wwwroot\\js\\site.js",

@@ -12,6 +12,8 @@ namespace Book.DataAccess.Profiles
             CreateMap<GetCompany, Company>();
             CreateMap<GetProduct, Product>();
             CreateMap<Product, GetProduct>();
+            CreateMap<OrderHeader, GetOrderHeader>();
+            CreateMap<GetOrderHeader, OrderHeader>();
         }
     }
 }
