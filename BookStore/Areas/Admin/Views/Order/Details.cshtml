@@ -1,5 +1,4 @@
-﻿@using Book.Utility;
-@model Book.Models.ViewModels.OrderVM
+﻿@model OrderVM
 
 
 <form method="post">
@@ -195,8 +194,10 @@
 									<input asp-for="OrderHeader.PaymentStatus" type="text" readonly class="form-control" />
 								</div>
 							</div>
-							<input type="submit" asp-action="UpdateOrderDetail" class="btn btn-warning form-control my-1" value="Update Order Details" />
-
+							@if (User.IsInRole(SD.Role_Admin) || User.IsInRole(SD.Role_Employee))
+							{
+								<input type="submit" asp-action="UpdateOrderDetail" class="btn btn-warning form-control my-1" value="Update Order Details" />
+							}
 
 
 						</div>
