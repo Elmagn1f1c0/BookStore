@@ -7,7 +7,6 @@ using Book.Models.ViewModels;
 using Book.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Book.DataAccess.DTO;
-using System.Linq;
 using AutoMapper;
 using System.Globalization;
 

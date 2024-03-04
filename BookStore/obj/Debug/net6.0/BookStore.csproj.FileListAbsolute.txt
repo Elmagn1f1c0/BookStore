@@ -290,9 +290,10 @@ C:\Users\hp\Desktop\BookStore\BookStore\BookStore\obj\Debug\net6.0\staticwebasse
 C:\Users\hp\Desktop\BookStore\BookStore\BookStore\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\hp\Desktop\BookStore\BookStore\BookStore\obj\Debug\net6.0\scopedcss\bundle\BookStore.styles.css
 C:\Users\hp\Desktop\BookStore\BookStore\BookStore\obj\Debug\net6.0\scopedcss\projectbundle\BookStore.bundle.scp.css
-C:\Users\hp\Desktop\BookStore\BookStore\BookStore\obj\Debug\net6.0\BookStore.csproj.CopyComplete
 C:\Users\hp\Desktop\BookStore\BookStore\BookStore\obj\Debug\net6.0\BookStore.dll
 C:\Users\hp\Desktop\BookStore\BookStore\BookStore\obj\Debug\net6.0\refint\BookStore.dll
 C:\Users\hp\Desktop\BookStore\BookStore\BookStore\obj\Debug\net6.0\BookStore.pdb
 C:\Users\hp\Desktop\BookStore\BookStore\BookStore\obj\Debug\net6.0\BookStore.genruntimeconfig.cache
 C:\Users\hp\Desktop\BookStore\BookStore\BookStore\obj\Debug\net6.0\ref\BookStore.dll
+C:\Users\hp\Desktop\BookStore\BookStore\BookStore\obj\Debug\net6.0\BookStore.sourcelink.json
+C:\Users\hp\Desktop\BookStore\BookStore\BookStore\obj\Debug\net6.0\BookStore.csproj.Up2Date

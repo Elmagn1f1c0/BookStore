@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Book.Models;
-using System.Security.Principal;
 
 namespace Book.DataAccess.Profiles
 {

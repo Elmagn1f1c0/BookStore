@@ -55,6 +55,7 @@ namespace BookStore.Areas.Customer.Controllers
                 //shopping cart exists
                 cartFromDb.Count += shoppingCart.Count;
                 _unitOfWork.ShoppingCart.Update(cartFromDb);
+                _unitOfWork.Save();
                 TempData["success"] = "Cart updated successfully";
 
             }
@@ -62,12 +63,12 @@ namespace BookStore.Areas.Customer.Controllers
             {
                 //add cart record
                 _unitOfWork.ShoppingCart.Add(shoppingCart);
+                _unitOfWork.Save();
+                HttpContext.Session.SetInt32(SD.SessionCart, _unitOfWork.ShoppingCart.GetAll(
+                u => u.ApplicationUserId == userId).Count());
                 TempData["success"] = "Cart Added successfully";
 
             }
-            
-            _unitOfWork.Save();
-
 
             return RedirectToAction(nameof(Index));
         }

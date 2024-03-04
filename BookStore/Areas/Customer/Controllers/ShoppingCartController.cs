@@ -206,7 +206,8 @@ namespace BookStore.Areas.Customer.Controllers
 			{
 				//remove that from cart
 				_unitOfWork.ShoppingCart.Remove(cart);
-			}
+                HttpContext.Session.SetInt32(SD.SessionCart, _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == cart.ApplicationUserId).Count() - 1);
+            }
 			else
 			{
 				cart.Count -= 1;
@@ -220,8 +221,11 @@ namespace BookStore.Areas.Customer.Controllers
 		public IActionResult Remove(int cartId)
 		{
 			var cart = _unitOfWork.ShoppingCart.Get(u => u.Id == cartId);
-			_unitOfWork.ShoppingCart.Remove(cart);
-			_unitOfWork.Save();
+           
+            _unitOfWork.ShoppingCart.Remove(cart);
+
+            HttpContext.Session.SetInt32(SD.SessionCart, _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == cart.ApplicationUserId).Count() - 1);
+            _unitOfWork.Save();
 			return RedirectToAction(nameof(Index));
 		}
 
